@@ -1,3 +1,11 @@
+load moore.dat
+X = ones(length(moore(:, 1)),2);
+X(:,2) = moore(:, 1);
+
+w = beta_0 + beta_1*
+
+res = w - X*beta_hat;
+=======
 %% Problem 6
 
 load moore.dat
@@ -21,4 +29,5 @@ subplot(2,1,1), normplot(res)
 subplot(2,1,2), hist(res)
 
 r2 = stats(1); % 0.9586
+
 
