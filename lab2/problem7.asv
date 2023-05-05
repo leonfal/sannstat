@@ -13,11 +13,11 @@ for i = 1:length(moderRokare)
 end
 
 moderAlkoholist = birth(:, 26);
-for i = 1:length(moderAlkoholist)
-    if(moderAlkoholist(i) < 2)
-        moderAlkoholist(i) = 0;
+for i = 1:length(moderRokare)
+    if(moderRokare(i) < 2)
+        moderRokare(i) = 0;
     else
-        moderAlkoholist(i) = 1;
+        moderRokare(i) = 1;
     end
 end
 
