@@ -28,11 +28,7 @@ barnViktApprox = X*beta_hat;
 
 % skatta barnets vikt givet moderVikt moderRökVanor moderAlkoholVanor
 X1 = [ones(length(moderVikt), 1) moderVikt moderRokare moderAlkoholist];
-[beta_hat1] = regress(barnVikt, X1);
+[beta_hat1, interval1, residual] = regress(barnVikt, X1);
 barnViktApprox1 = X1*beta_hat1;
 
-normplot(barnViktApprox1)
-hold on
-normplot(barnViktApprox)
-hold on
-normplot(barnVikt)
+normplot(residual)
