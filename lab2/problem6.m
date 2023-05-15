@@ -1,4 +1,3 @@
-1
 %% Problem 6
 
 load moore.dat
@@ -18,8 +17,14 @@ w = log(Y);
 % w är vårt riktiga värde, X*beta_hat är vår skattning för w
 
 res = w-X*beta_hat;
+
+subplot(2,2,1), normplot(res)
+subplot(2,2,2), hist(res)
+% subplot(2,2,3), plot(moore(:,1), Y)
+% subplot(2,2,4), plot(moore(:, 1), exp(1).^(X*beta_hat))
 % subplot(2,1,1), normplot(res)
 % subplot(2,1,2), hist(res)
+
 
 r2 = stats(1); % 0.9586
 
